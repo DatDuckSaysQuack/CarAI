@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  orchestrator:
+    image: python:3.11-slim
+    command: python /app/apps/orchestrator/main.py
+    volumes:
+      - ../../:/app
+    ports:
+      - "8000:8000"
